@@ -8,18 +8,14 @@ import com.jagcoder.Registration_Login.repository.UserRepository;
 import com.jagcoder.Registration_Login.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
 @Service
 public class UserServiceImpl implements UserService {
-
     private UserRepository userRepository;
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;
-
     public UserServiceImpl(UserRepository userRepository,
                            RoleRepository roleRepository,
                            PasswordEncoder passwordEncoder) {
@@ -27,7 +23,6 @@ public class UserServiceImpl implements UserService {
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
     }
-
     @Override
     public void saveUser(UserDto userDto) {
         User user = new User();
